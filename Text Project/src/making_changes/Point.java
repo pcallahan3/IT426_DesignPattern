@@ -44,7 +44,6 @@ public class Point {
 
         return Objects.hash(x, y);
     }
-
     @Override
     public String toString() {
         return "Point{" +
