@@ -20,6 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -36,7 +37,7 @@ public class PracticeWithControls extends Application{
         public void start(Stage stage) throws Exception {
 
 
-            stage.setScene(createLists());
+            stage.setScene(createDialogs());
             stage.setTitle("Practice with controls");
             stage.show();
         }
@@ -234,7 +235,27 @@ public class PracticeWithControls extends Application{
         //Dialog boxes - Color picker, Date picker
         public Scene createDialogs(){
 
-            return null;
+            VBox box = new VBox();
+            box.setAlignment(Pos.CENTER);
+            box.setSpacing(10);
+            box.setPadding(new Insets(10));
+
+            ColorPicker colors = new ColorPicker();
+            box.getChildren().add(colors);
+
+            colors.valueProperty().addListener(new ChangeListener<Color>() {
+                @Override
+                public void changed(ObservableValue<? extends Color> observable, Color oldValue, Color newValue) {
+
+                    System.out.println("Color chosen: r =  " + newValue.getRed() + ", g = " + newValue.getGreen()
+                    + ", b = " + newValue.getBlue());
+                }
+            });
+
+            DatePicker dates = new DatePicker();
+            box.getChildren().add(dates);
+
+            return new Scene(box,300,330);
         }
 
 
