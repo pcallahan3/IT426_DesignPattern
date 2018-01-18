@@ -2,6 +2,7 @@ package layouts;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -9,6 +10,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
@@ -21,7 +25,7 @@ public class PracticeWithControls extends Application {
     public void start(Stage stage) {
 
         stage.setTitle("Practicing with layouts");
-        stage.setScene(useGridPane());
+        stage.setScene(useStackPane());
         stage.show();
 
     }
@@ -82,7 +86,32 @@ public class PracticeWithControls extends Application {
     //StackPane - place elements on top of each other
     public Scene useStackPane(){
 
-        return null; //new Scene();
+        StackPane pane = new StackPane();
+
+        //Create a few controls
+        Circle circle1 = new Circle(170);
+        Circle circle2 = new Circle(70);
+        Circle circle3 = new Circle(120);
+
+        circle1.setFill(Color.ANTIQUEWHITE);
+        circle2.setFill(Color.ALICEBLUE);
+        circle3.setFill(Color.ORANGE);
+
+        //Add the controls to the layout
+        pane.getChildren().addAll(circle1, circle2, circle3);
+
+        //You can place complex controls over other controls
+        Button button = new Button("Click me");
+        pane.getChildren().add(button);
+
+        //Move elements on the stackpane
+        StackPane.setAlignment(circle1, Pos.TOP_RIGHT);
+        StackPane.setAlignment(circle2, Pos.BOTTOM_RIGHT);
+        StackPane.setAlignment(circle3, Pos.BOTTOM_LEFT);
+
+
+
+        return new Scene(pane, 300, 300);
     }
 
 
