@@ -1,22 +1,24 @@
 package layouts;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import  javafx.scene.text.Text;
+
+import java.io.File;
+import java.net.MalformedURLException;
 import java.util.Optional;
 
 public class PracticeWithControls extends Application {
@@ -25,7 +27,7 @@ public class PracticeWithControls extends Application {
     public void start(Stage stage) {
 
         stage.setTitle("Practicing with layouts");
-        stage.setScene(useStackPane());
+        stage.setScene(useBorderPane());
         stage.show();
 
     }
@@ -116,9 +118,82 @@ public class PracticeWithControls extends Application {
 
 
     //BorderPane - place elements in regions - north, south, east, west, and center
-    public Scene useBorderPane(){
+    public Scene useBorderPane()  {
 
-        return null;//new Scene();
+        BorderPane pane = new BorderPane();
+        pane.setPadding(new Insets(10));
+
+        //North
+        HBox northPanel = new HBox();
+        northPanel.setAlignment(Pos.CENTER);
+        northPanel.setSpacing(10);
+        northPanel.getChildren().addAll(new Button("Please"),new Button("click"),
+                                        new Button("here"),new Button("now"),new Button("!"));
+
+        pane.setTop(northPanel);
+
+        //South
+        Label lotsOfText = new Label("LLLLLLLLLLLLDFDFDFDFDFDDDDDDDDDDDDDDDD" +
+                                   "DDDDDFDFDFDFDFDFDFDSDFDSFDS");
+        lotsOfText.setWrapText(true);
+        pane.setBottom(lotsOfText);
+
+        //East
+        VBox eastPanel = new VBox();
+        eastPanel.setAlignment(Pos.CENTER);
+        eastPanel.setSpacing(10);
+        eastPanel.setPadding(new Insets(10));
+
+        //Display into a drop-down list
+        ObservableList<String> items = FXCollections.observableArrayList
+                ("Swimming","Reading","Watching TV","Movies","Music");
+
+        ListView list = new ListView(items);
+
+
+        eastPanel.getChildren().addAll(list);
+        pane.setRight(eastPanel);
+
+        //West
+        VBox westPanel = new VBox();
+        westPanel.setAlignment(Pos.CENTER);
+        westPanel.setPadding(new Insets(10));
+        westPanel.setSpacing(10);
+
+        //Create several options
+        String[] choices = {"Blue", "Purple", "Pink", "White"};
+        CheckBox[] checkBoxes = new CheckBox[choices.length];
+
+        for(int i = 0; i < choices.length; i++){
+
+            CheckBox checkBox = new CheckBox(choices[i]);
+            checkBox.setPrefWidth(100);
+            checkBox.setAlignment(Pos.CENTER_LEFT);
+
+            checkBoxes[i] = checkBox;
+            westPanel.getChildren().add(checkBox);
+        }
+
+        pane.setLeft(westPanel);
+
+        //Center
+        Image image = null;
+        try {
+            image = new Image(new File("images/Desert.jpg")
+                    .toURI().toURL().toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        ImageView imageControl = new ImageView(image);
+
+        //Resize the view control
+        //imageControl.setFitHeight(200);
+        //imageControl.setFitWidth(200);
+        pane.setCenter(imageControl);
+
+
+
+        return new Scene(pane, 600, 600);
     }
 
     //Others - FlowPane, TilePane, AnchorPane
