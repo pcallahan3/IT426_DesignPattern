@@ -4,12 +4,20 @@ package controls;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -17,6 +25,9 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.io.File;
+import java.net.MalformedURLException;
 import java.util.Random;
 
 public class PracticeWithControls extends Application{
@@ -25,7 +36,7 @@ public class PracticeWithControls extends Application{
         public void start(Stage stage) throws Exception {
 
 
-            stage.setScene(createOptionalElements());
+            stage.setScene(createLists());
             stage.setTitle("Practice with controls");
             stage.show();
         }
@@ -165,16 +176,59 @@ public class PracticeWithControls extends Application{
         }
 
         //Display images?
-        public Scene createOrShowImages(){
+        public Scene createOrShowImages() throws MalformedURLException {
 
-            return null;
+            //Load image into control
+            Image image = new Image(new File("images/Desert.jpg")
+                                    .toURI().toURL().toString());
+            ImageView imageControl = new ImageView(image);
+
+            //Resize the view control
+            imageControl.setFitHeight(200);
+            imageControl.setFitWidth(200);
+
+            VBox  layout = new VBox();
+            layout.getChildren().add(imageControl);
+
+            return new Scene(layout,500,500);
         }
 
 
         //Lists - dropdown (ComboBox), ListView
         public Scene createLists(){
 
-            return null;
+
+            VBox box = new VBox();
+            box.setAlignment(Pos.CENTER);
+            box.setSpacing(10);
+            box.setPadding(new Insets(10));
+
+            //Display into a drop-down list
+            ObservableList<String> items = FXCollections.observableArrayList
+                                            ("Newspaper","Friend","Local Ad","Flyer","Internet");
+
+            ComboBox combo = new ComboBox();
+            combo.getItems().addAll(items);
+
+            //Display a list
+            items = FXCollections.observableArrayList
+                    ("Swimming","Reading","Watching TV","Movies","Music");
+
+            ListView list = new ListView(items);
+
+
+            box.getChildren().addAll(combo, list);
+
+            //Lists can support mutiple selections
+            //list.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+            list.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+                @Override
+                public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+                    System.out.println("Selected: "  + newValue);
+                }
+            });
+
+            return new Scene(box, 300,300);
         }
 
         //Dialog boxes - Color picker, Date picker
