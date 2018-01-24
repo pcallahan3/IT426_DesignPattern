@@ -23,7 +23,6 @@ public class Launcher {
      * Entry point into application
      *
      * @param args Launch CalculatorUI class
-     *
      */
     public static void main(String[] args) {
         Application.launch(CalculatorUI.class, args);
