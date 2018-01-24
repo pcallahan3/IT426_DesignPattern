@@ -23,42 +23,56 @@ import javafx.geometry.Pos;
 import java.io.File;
 import java.net.URL;
 
+
+/**
+ *  Calculator class to hold Calculator user interface
+ *
+ * @version 1.0
+ * @author  Patrick Callahan
+ *
+ */
 public class CalculatorUI extends Application {
 
     private static final int MAX_BUTTONS = 16;
+
     private Button[] integerButtons;
     private TextField numberDisplay = new TextField();
-    GridPane paneButton = new GridPane();
+    GridPane gridPane = new GridPane();
     BorderPane root = new BorderPane();
-    private String[] buttonText = {
-            "7", "8", "9", "+",
-            "4", "5", "6", "-",
-            "1", "2", "3", "x",
-            "0", "Enter", " ", "/"
+    private String[] buttonText = {"7", "8", "9", "+", "4", "5", "6", "-",
+            "1", "2", "3", "*", "0", "Enter", " " , "/"
     };
 
 
     @Override
-    public void start(Stage primaryStage) {
+    /**
+     *
+     * Start method to render Scence and componeents
+     *
+     * @param stage Render Stage stage
+     *
+     */
+    public void start(Stage stage) {
 
-        numberDisplayPref();
+        numberDisplayAlignment();
         iterateOverButtons();
 
-        //If button equals enter then make the 14th button disappear and set preffered width
+        //If button equals "enter" then make the 14th button disappear and set preffered width of "enter" button
         if (buttonText[13].equalsIgnoreCase("enter")) {
             integerButtons[14].setVisible(false);
+            //integerButtons[13].setPrefWidth(80);
         }
 
         Scene scene = new Scene(getBorderPain(root), 300, 275);
-        primaryStage.setScene(scene);
+        stage.setScene(scene);
         getCSSFile(scene);
-        primaryStage.setTitle("JavaFX Calculator");
-        primaryStage.show();
+        stage.setTitle("Calculator");
+        stage.show();
 
     }
 
     // Set and align the numberDisplay
-    private void numberDisplayPref() {
+    private void numberDisplayAlignment() {
         numberDisplay.setAlignment(Pos.CENTER_RIGHT);
         numberDisplay.setPrefSize(20, 10);
     }
@@ -74,27 +88,29 @@ public class CalculatorUI extends Application {
     //Get BorderPane, set padding, set id, set position of number display, and Vgap and Hgap
     //for buttons
     private BorderPane getBorderPain(BorderPane root) {
-        paneButton.setPadding(new Insets(15, 5, 15, 5));
-        paneButton.setVgap(10);
-        paneButton.setHgap(10);
+        gridPane.setPadding(new Insets(15, 5, 15, 5));
+        gridPane.setVgap(10);
+        gridPane.setHgap(10);
         root.setPadding(new Insets(50, 10, 80, 10));
         root.setId("root");
         root.setBottom(numberDisplay);
-        root.setCenter(paneButton);
+        root.setCenter(gridPane);
         return root;
     }
 
     //Iterate over buttons and create a 4 x 4 column grid
-    private void iterateOverButtons() {
+    private void iterateOverButtons(){
         int columnRows = 4;
         integerButtons = new Button[MAX_BUTTONS];
         for (int i = 0; i < integerButtons.length; ++i) {
             integerButtons[i] = new Button(buttonText[i]);
             integerButtons[i].setId("buttons");
             integerButtons[i].setPrefSize(60, 80);
-            paneButton.add(integerButtons[i], i % columnRows, i / columnRows);
+            gridPane.add(integerButtons[i], i % columnRows , i / columnRows);
         }
     }
+
+
 
 
 }
