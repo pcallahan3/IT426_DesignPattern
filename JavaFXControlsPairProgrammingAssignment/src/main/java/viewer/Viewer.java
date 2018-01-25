@@ -3,7 +3,6 @@ package viewer;
 /*Name: Patrick Callahan
   Date: 1/22/18
   File Name: JavaFXControlsPairProgrammingAssignment
-
  */
 
 import javafx.application.Application;
@@ -42,6 +41,9 @@ public class Viewer extends Application {
     ToggleGroup group = new ToggleGroup();
     Image image;
     ImageView imageControl;
+    StackPane root = new StackPane();
+    VBox vbox = new VBox(60);
+    HBox hbox = new HBox(15);
 
 
     @Override
@@ -52,15 +54,18 @@ public class Viewer extends Application {
         primaryStage.show();
     }
 
+    //Setting up Scene object
     public Scene getScene(){
-        StackPane root = new StackPane();
+        outputRadioButtons();
+        toggleIamge();
+        setHBoxLayoutPositions();
+        setVBoxLayoutPositions();
+        return new Scene(root,350,400);
+    }
 
-        VBox vbox = new VBox(60);
-        HBox hbox = new HBox(15);
-
+    //Looping over RadioButton objects, setting text, getting user data, and adding in to the HBox object
+    private void outputRadioButtons(){
         radioButtons = new RadioButton[MAX_BUTTONs];
-
-        //Looping over RadioButton objects, setting text, getting user data, and adding in to the HBox object
         for (int i = 0; i < MAX_BUTTONs; i++) {
             radioButtons[i] = new RadioButton(animals[i]);
             radioButtons[i].setFont(Font.font("Verdana", 12));
@@ -69,41 +74,50 @@ public class Viewer extends Application {
             hbox.getChildren().add(radioButtons[i]);
         }
 
-        //Setting an ChangeListener for the RadioButtons so when a user clicks a button an animal image will appear
+    }
+
+
+    //Setting an ChangeListener for the RadioButtons so when a user clicks a button an animal image will appear
+    private void toggleIamge() {
         group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-                @Override
-                public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
-                    if (group.getSelectedToggle() != null) {
-                        image = null;
-                        try {
-                            image = new Image(new File("images/" + group.getSelectedToggle().getUserData() + ".jpg")
-                                    .toURI().toURL().toString(), 250, 250, false, false);
-                        } catch (MalformedURLException e) {
-                            e.printStackTrace();
-                        }
-                        imageControl = new ImageView(image);
-                        imageControl.setImage(image);
-                        root.getChildren().addAll(imageControl);
+            @Override
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+                if (group.getSelectedToggle() != null) {
+                    image = null;
+                    try {
+                        image = new Image(new File("images/" + group.getSelectedToggle().getUserData() + ".jpg")
+                                .toURI().toURL().toString(), 250, 250, false, false);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
                     }
+                    imageControl = new ImageView(image);
+                    imageControl.setImage(image);
+                    root.getChildren().addAll(imageControl);
                 }
+            }
 
-            });
+        });
+    }
+
+    //Setting HBox positions
+    private void setHBoxLayoutPositions() {
+        hbox.setAlignment(Pos.TOP_CENTER);
+        hbox.setPadding(new Insets(30));
+    }
+
+    //Setting VBox positions
+    private void setVBoxLayoutPositions() {
+        vbox.setPadding(new Insets(30));
+        vbox.getChildren().add(hbox);
+        root.getChildren().add(hbox);
+    }
 
 
-            hbox.setAlignment(Pos.TOP_CENTER);
-            hbox.setPadding(new Insets(30));
-            vbox.setPadding(new Insets(30));
-            vbox.getChildren().add(hbox);
-            root.getChildren().add(hbox);
 
-            return new Scene(root,350,400);
-        }
+    public static void main (String[]args){
 
+        Application.launch(args);
+    }
 
-        public static void main (String[]args){
-
-            Application.launch(args);
-        }
 
 }
-
