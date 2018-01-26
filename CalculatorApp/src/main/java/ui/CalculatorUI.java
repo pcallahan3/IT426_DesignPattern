@@ -33,14 +33,14 @@ import java.net.URL;
  */
 public class CalculatorUI extends Application {
 
-    private static final int MAX_BUTTONS = 16;
+    private static final int MAX_BUTTONS = 15;
 
     private Button[] integerButtons;
     private TextField numberDisplay = new TextField();
     GridPane gridPane = new GridPane();
     BorderPane root = new BorderPane();
     private String[] buttonText = {"7", "8", "9", "+", "4", "5", "6", "-",
-                                   "1", "2", "3", "*", "0", "Enter", " " , "/"
+                                   "1", "2", "3", "*", "0", "Enter",  "/"
     };
 
 
@@ -59,8 +59,9 @@ public class CalculatorUI extends Application {
 
         //If button equals "enter" then make the 14th button disappear and set preffered width of "enter" button
         if (buttonText[13].equalsIgnoreCase("enter")) {
-            integerButtons[14].setVisible(false);
-            //integerButtons[13].setPrefWidth(80);
+            //integerButtons[14].setVisible(true);
+            //integerButtons[13].setPrefWidth(180);
+            GridPane.setColumnSpan(integerButtons[13], 2);
         }
 
         Scene scene = new Scene(getBorderPain(root), 300, 275);

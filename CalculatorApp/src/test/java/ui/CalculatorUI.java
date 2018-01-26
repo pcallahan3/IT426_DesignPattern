@@ -8,6 +8,7 @@ package ui;
  */
 
 
+import com.sun.management.GcInfo;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -34,7 +35,6 @@ import java.net.URL;
 public class CalculatorUI extends Application {
 
     private static final int MAX_BUTTONS = 16;
-
     private Button[] integerButtons;
     private TextField numberDisplay = new TextField();
     GridPane gridPane = new GridPane();
@@ -59,8 +59,9 @@ public class CalculatorUI extends Application {
 
         //If button equals "enter" then make the 14th button disappear and set preffered width of "enter" button
         if (buttonText[13].equalsIgnoreCase("enter")) {
-            integerButtons[14].setVisible(false);
-            //integerButtons[13].setPrefWidth(80);
+            //integerButtons[14].setVisible(true);
+            integerButtons[13].setPrefWidth(180);
+            GridPane.setColumnSpan(integerButtons[13], 2);
         }
 
         Scene scene = new Scene(getBorderPain(root), 300, 275);
@@ -68,7 +69,6 @@ public class CalculatorUI extends Application {
         getCSSFile(scene);
         stage.setTitle("Calculator");
         stage.show();
-
     }
 
     // Set and align the numberDisplay
@@ -77,11 +77,23 @@ public class CalculatorUI extends Application {
         numberDisplay.setPrefSize(20, 10);
     }
 
+    //Iterate over buttons and create a 4 x 4 column grid
+    private void iterateOverButtons(){
+        int columnRows = 4;
+        integerButtons = new Button[MAX_BUTTONS];
+        for (int i = 0; i < integerButtons.length; ++i) {
+            integerButtons[i] = new Button(buttonText[i]);
+            integerButtons[i].setId("buttons");
+            integerButtons[i].setPrefSize(60, 80);
+            gridPane.add(integerButtons[i], i % columnRows , i / columnRows);
+        }
+    }
+
     //Get css file
     private Scene getCSSFile(Scene scene) {
-        File f = new File("calculator.css");
+        File file = new File("calculator.css");
         scene.getStylesheets().clear();
-        scene.getStylesheets().add("file:///" + f.getAbsolutePath().replace("\\", "/"));
+        scene.getStylesheets().add("file:///" + file.getAbsolutePath().replace("\\", "/"));
         return scene;
     }
 
@@ -97,20 +109,5 @@ public class CalculatorUI extends Application {
         root.setCenter(gridPane);
         return root;
     }
-
-    //Iterate over buttons and create a 4 x 4 column grid
-    private void iterateOverButtons(){
-        int columnRows = 4;
-        integerButtons = new Button[MAX_BUTTONS];
-        for (int i = 0; i < integerButtons.length; ++i) {
-            integerButtons[i] = new Button(buttonText[i]);
-            integerButtons[i].setId("buttons");
-            integerButtons[i].setPrefSize(60, 80);
-            gridPane.add(integerButtons[i], i % columnRows , i / columnRows);
-        }
-    }
-
-
-
 
 }

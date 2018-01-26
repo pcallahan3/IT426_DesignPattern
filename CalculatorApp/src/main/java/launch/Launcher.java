@@ -6,6 +6,7 @@ package launch;
     File Name: Launcher.java
  */
 
+import calculator.Calculator;
 import javafx.application.Application;
 import ui.CalculatorUI;
 
@@ -25,7 +26,6 @@ public class Launcher {
      * @param args Launch CalculatorUI class
      */
     public static void main(String[] args) {
-        Application.launch(CalculatorUI.class, args);
+       Application.launch(CalculatorUI.class, args);
     }
-
 }
