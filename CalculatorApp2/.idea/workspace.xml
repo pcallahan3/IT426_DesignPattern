@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9c6b3e-ab30-4d7a-80fb-956a5de81565" name="Default" comment="Version 2 of Calculator App with business logic seperated into a controller">
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CalculatorApp#1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/CalculatorApp#1.iml" afterPath="$PROJECT_DIR$/../CalculatorApp#1/CalculatorApp#1.iml" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/CalculatorApp#1.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../CalculatorApp/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/misc.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/modules.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/vcs.xml" afterPath="" />
@@ -17,19 +17,20 @@
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/calculator/Calculator.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/launch/Launcher.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/ui/CalculatorUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/JavaFXControlsPairProgrammingAssignment.iml" afterPath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/JavaFXControlsPairProgrammingAssignment.iml" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/src/main/java/viewer/Viewer.java" afterPath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/src/main/java/viewer/Viewer.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/JavaFXControlsPairProgrammingAssignment.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/src/main/java/viewer/Viewer.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/target/classes/viewer/Viewer$1.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/target/classes/viewer/Viewer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/JavaFXLayoutsControls.iml" afterPath="$PROJECT_DIR$/../JavaFXLayoutsControls/JavaFXLayoutsControls.iml" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/main/java/layouts/PracticeWithControls.java" afterPath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/main/java/layouts/PracticeWithControls.java" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/test/java/controls/PracticeWithControls.java" afterPath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/test/java/controls/PracticeWithControls.java" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MyFirstMavenProject/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/MyFirstMavenProject.iml" afterPath="$PROJECT_DIR$/../MyFirstMavenProject/MyFirstMavenProject.iml" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/pom.xml" afterPath="$PROJECT_DIR$/../MyFirstMavenProject/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/src/main/java/enctyption_practice/EncryptionPractice.java" afterPath="$PROJECT_DIR$/../MyFirstMavenProject/src/main/java/enctyption_practice/EncryptionPractice.java" />
-      <change beforePath="$PROJECT_DIR$/../Text Project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Text Project/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/JavaFXLayoutsControls.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/main/java/layouts/PracticeWithControls.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/test/java/controls/PracticeWithControls.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/MyFirstMavenProject.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/src/main/java/enctyption_practice/EncryptionPractice.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Text Project/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CalculatorController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculatorController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/CalculatorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+            <state relative-caret-position="287">
+              <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -56,17 +57,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="251">
-              <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+              <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -347,7 +348,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517455358636</updated>
       <workItem from="1517455364633" duration="3109000" />
-      <workItem from="1517458624526" duration="639000" />
+      <workItem from="1517458624526" duration="855000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2 of Calculator App with business logic seperated into a controller">
       <created>1517458420793</created>
@@ -367,10 +368,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3748000" />
+    <option name="totallyTimeSpent" value="3964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -380,8 +382,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -478,26 +480,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
-          <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/CalculatorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        <state relative-caret-position="287">
+          <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
         </state>
       </provider>
