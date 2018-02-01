@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9c6b3e-ab30-4d7a-80fb-956a5de81565" name="Default" comment="Version 2 of Calculator App with business logic seperated into a controller">
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp#1/CalculatorApp#1.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../CalculatorApp/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/CalculatorApp#1.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/calculator.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/main/java/calculator/Calculator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/main/java/launch/Launcher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/main/java/ui/CalculatorUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/calculator/Calculator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/launch/Launcher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../CalculatorApp/src/test/java/ui/CalculatorUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/JavaFXControlsPairProgrammingAssignment.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/src/main/java/viewer/Viewer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/target/classes/viewer/Viewer$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXControlsPairProgrammingAssignment/target/classes/viewer/Viewer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/JavaFXLayoutsControls.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/main/java/layouts/PracticeWithControls.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../JavaFXLayoutsControls/src/test/java/controls/PracticeWithControls.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/MyFirstMavenProject.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../MyFirstMavenProject/src/main/java/enctyption_practice/EncryptionPractice.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../Text Project/.idea/workspace.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../README.md" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -348,7 +321,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517455358636</updated>
       <workItem from="1517455364633" duration="3109000" />
-      <workItem from="1517458624526" duration="855000" />
+      <workItem from="1517458624526" duration="1157000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2 of Calculator App with business logic seperated into a controller">
       <created>1517458420793</created>
@@ -368,7 +341,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3964000" />
+    <option name="totallyTimeSpent" value="4266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="860" extended-state="0" />
