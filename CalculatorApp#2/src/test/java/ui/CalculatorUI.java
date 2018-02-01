@@ -1,15 +1,14 @@
 package ui;
 
-
 /*
     Name: Patrick Callahan
     Date: 1/23/2018
     File Name: Calculator.java
  */
 
-
-import com.sun.management.GcInfo;
+import controller.CalculatorController;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -20,6 +19,7 @@ import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import  javafx.event.EventHandler;
 
 import java.io.File;
 import java.net.URL;
@@ -28,21 +28,24 @@ import java.net.URL;
 /**
  *  Calculator class to hold Calculator user interface
  *
- * @version 1.0
+ * @version 2.0
  * @author  Patrick Callahan
  *
  */
 public class CalculatorUI extends Application {
 
+    //Objects and primitives used
     private static final int MAX_BUTTONS = 16;
     private Button[] integerButtons;
     private TextField numberDisplay = new TextField();
-    GridPane gridPane = new GridPane();
-    BorderPane root = new BorderPane();
-    private String[] buttonText = {"7", "8", "9", "+", "4", "5", "6", "-",
-            "1", "2", "3", "*", "0", "Enter", " " , "/"
-    };
+    private GridPane gridPane = new GridPane();
+    private BorderPane root = new BorderPane();
+    private CalculatorController newController = new CalculatorController();
 
+    //Text for buttons
+    private String[] buttonText = {"7", "8", "9", "+", "4", "5", "6", "-",
+            "1", "2", "3", "*", "0", "Enter", " ", "/"
+    };
 
     @Override
     /**
@@ -60,42 +63,34 @@ public class CalculatorUI extends Application {
         //If button equals "enter" then make the 14th button disappear and set preffered width of "enter" button
         if (buttonText[13].equalsIgnoreCase("enter")) {
             //integerButtons[14].setVisible(true);
-            integerButtons[13].setPrefWidth(180);
+            //integerButtons[13].setPrefWidth(180);
             GridPane.setColumnSpan(integerButtons[13], 2);
         }
 
+        //Set and show scene
         Scene scene = new Scene(getBorderPain(root), 300, 275);
         stage.setScene(scene);
-        getCSSFile(scene);
+        //getCSSFile(scene);
         stage.setTitle("Calculator");
         stage.show();
+
     }
+
 
     // Set and align the numberDisplay
     private void numberDisplayAlignment() {
+        newController.setDisplay(numberDisplay);
         numberDisplay.setAlignment(Pos.CENTER_RIGHT);
         numberDisplay.setPrefSize(20, 10);
     }
 
-    //Iterate over buttons and create a 4 x 4 column grid
-    private void iterateOverButtons(){
-        int columnRows = 4;
-        integerButtons = new Button[MAX_BUTTONS];
-        for (int i = 0; i < integerButtons.length; ++i) {
-            integerButtons[i] = new Button(buttonText[i]);
-            integerButtons[i].setId("buttons");
-            integerButtons[i].setPrefSize(60, 80);
-            gridPane.add(integerButtons[i], i % columnRows , i / columnRows);
-        }
-    }
-
-    //Get css file
+   /* //Get css file
     private Scene getCSSFile(Scene scene) {
-        File file = new File("calculator.css");
+        File f = new File("calculator.css");
         scene.getStylesheets().clear();
-        scene.getStylesheets().add("file:///" + file.getAbsolutePath().replace("\\", "/"));
+        scene.getStylesheets().add("file:///" + f.getAbsolutePath().replace("\\", "/"));
         return scene;
-    }
+    } */
 
     //Get BorderPane, set padding, set id, set position of number display, and Vgap and Hgap
     //for buttons
@@ -110,4 +105,18 @@ public class CalculatorUI extends Application {
         return root;
     }
 
+    //Iterate over buttons and create a 4 x 4 column grid
+    private void iterateOverButtons() {
+        int columnRows = 4;
+        integerButtons = new Button[MAX_BUTTONS];
+        for (int i = 0; i < integerButtons.length; ++i) {
+            integerButtons[i] = new Button(buttonText[i]);
+            integerButtons[i].setOnAction(newController.buttonClickHandler());
+            integerButtons[i].setId("buttons");
+            integerButtons[i].setPrefSize(60, 80);
+            gridPane.add(integerButtons[i], i % columnRows, i / columnRows);
+        }
+        integerButtons[14].setVisible(false);
+        integerButtons[13].setPrefWidth(180);
+    }
 }

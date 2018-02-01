@@ -6,14 +6,14 @@ package launch;
     File Name: Launcher.java
  */
 
-import calculator.Calculator;
+
 import javafx.application.Application;
 import ui.CalculatorUI;
 
 /**
  *   Launch class to launch CalculatorUI
  *
- * @version 1.0
+ * @version 2.0
  * @author  Patrick Callahan
  *
  */
@@ -29,3 +29,4 @@ public class Launcher {
        Application.launch(CalculatorUI.class, args);
     }
 }
+
