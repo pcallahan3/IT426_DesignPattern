@@ -63,8 +63,6 @@ public class CalculatorUI extends Application {
 
         //If button equals "enter" then make the 14th button disappear and set preffered width of "enter" button
         if (buttonText[13].equalsIgnoreCase("enter")) {
-            //integerButtons[14].setVisible(true);
-            //integerButtons[13].setPrefWidth(180);
             GridPane.setColumnSpan(integerButtons[13], 2);
         }
 
